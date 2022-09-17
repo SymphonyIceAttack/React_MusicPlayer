@@ -1,5 +1,6 @@
 import React, { useId, useState } from "react";
 import NavBarItem from "@/components/NavBarItem";
+import Style from "./PageNavBar.module.less";
 const index = () => {
     const [NavBarList, setNavBarList] = useState([
         {
@@ -20,8 +21,8 @@ const index = () => {
         },
     ]);
     return (
-        <div className="flex items-center">
-            <span className="min-w-80 text-20 p-x-20 color-warmGray  truncate overflow-auto">
+        <div className={`${Style.PageNavBar} flex items-center`}>
+            <span className="min-w-80   p-x-20 color-warmGray  truncate overflow-auto">
                 全局状态
             </span>
             <div className="flex items-center">

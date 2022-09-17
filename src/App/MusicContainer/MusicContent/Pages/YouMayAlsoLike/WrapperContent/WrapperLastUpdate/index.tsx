@@ -3,11 +3,12 @@ import WrapperTitle from "../WrapperTitle";
 import MusicPlayItem from "@/components/MusicPlayItem";
 import LastPlaySongHook from "@/hook/LastPlaySongHook";
 import ContentLoader, { List } from "react-content-loader";
+import Style from "./WrapperLastUpdate.module.less";
 const index = () => {
     const [newSong, isLoading] = LastPlaySongHook();
 
     return (
-        <div className="text-20">
+        <div className={`${Style.WrapperLastUpdate}`}>
             <WrapperTitle content={"最新歌曲"} />
             {isLoading ? (
                 <List
