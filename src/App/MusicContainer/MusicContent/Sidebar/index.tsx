@@ -11,7 +11,7 @@ import { GiLoveSong } from "react-icons/gi";
 import { BiRadio } from "react-icons/bi";
 import { SiAirplayaudio } from "react-icons/si";
 import { MdOutlineQueueMusic } from "react-icons/md";
-import { BsFillBrushFill } from "react-icons/bi";
+import { IoIosBrush } from "react-icons/io";
 import Style from "./Sidebar.module.less";
 const index = () => {
     return (
@@ -46,7 +46,7 @@ const index = () => {
             </SideItem>
             <SideBarTitle content="美化" />
             <SideItem content="主题">
-                <BsFillBrushFill size={18} />
+                <IoIosBrush size={18} />
             </SideItem>
         </div>
     );
