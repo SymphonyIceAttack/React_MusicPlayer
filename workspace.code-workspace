@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "./"
+		},
+		{
+			"path": "./src/store"
+		},
+		{
+			"path": "./src/App"
+		},
+		{
+			"path": "./src/App/MusicContainer/MusicContent/Pages"
+		},
+		{
+			"path": "./src/components"
+		},
+		{
+			"path": "./src/hook"
+		},
+	],
+	"settings": {
+		"nuxt.isNuxtApp": false,
+		"DockerRun.DisableAutoGenerateConfig": true
+	}
+}

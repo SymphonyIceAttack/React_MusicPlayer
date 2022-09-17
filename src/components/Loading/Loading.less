@@ -1,0 +1,53 @@
+.Loading {
+    /* 相对定位 */
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* 只需要将其他边的颜色设置为透明 */
+    border: 3px solid transparent;
+    border-top-color: blueviolet;
+    animation: rotate 2s linear infinite;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        /* 这边也是一样 用伪元素做边框 */
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: blue;
+        animation: rotate 3s linear infinite;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: blue;
+        /* 动画时长  linear是匀速运动 infinite 是无限次数 */
+        animation: rotate 1.5s linear infinite;
+    }
+
+
+    /* 下面定义一下动画 */
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            /* 顺时针运动 */
+            transform: rotate(360deg);
+        }
+    }
+}
