@@ -6,12 +6,12 @@ import {
     AiOutlineSearch,
     AiOutlineDownload,
     AiOutlineCloudDownload,
-} from "react-icons/Ai";
-import { GiLoveSong } from "react-icons/Gi";
+} from "react-icons/ai";
+import { GiLoveSong } from "react-icons/gi";
 import { BiRadio } from "react-icons/bi";
 import { SiAirplayaudio } from "react-icons/si";
-import { MdOutlineQueueMusic } from "react-icons/Md";
-import { BsFillBrushFill } from "react-icons/Bs";
+import { MdOutlineQueueMusic } from "react-icons/md";
+import { BsFillBrushFill } from "react-icons/bi";
 import Style from "./Sidebar.module.less";
 const index = () => {
     return (

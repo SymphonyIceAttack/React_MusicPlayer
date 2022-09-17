@@ -1,6 +1,6 @@
 import React from "react";
-import { IoMdNotificationsOutline } from "react-icons/Io";
-import { AiOutlineCloud } from "react-icons/Ai";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { AiOutlineCloud } from "react-icons/ai";
 const index = () => {
     return (
         <div className="m-l-20%  h-60%  flex justify-end items-center hover:color-white">

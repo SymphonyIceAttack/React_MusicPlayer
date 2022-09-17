@@ -1,6 +1,6 @@
 import React from "react";
 import IconItem from "./IconItem";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/Ai";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { BsArrowClockwise } from "react-icons/Bs";
 
 const index = () => {
