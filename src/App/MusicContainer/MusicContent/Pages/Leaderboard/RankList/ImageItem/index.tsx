@@ -7,6 +7,7 @@ interface Props {
     isLoading: boolean;
 }
 const index: React.FC<Props> = ({ coverImgUrl, name, id, isLoading }) => {
+    const [isOnLoad, setIsOnLoad] = useState(false);
     return (
         <div className="m-15 flex flex-col justify-center w-200">
             <img
@@ -14,12 +15,17 @@ const index: React.FC<Props> = ({ coverImgUrl, name, id, isLoading }) => {
                  text-0 hover:border-3 hover:bgBlur"
                 src={coverImgUrl}
                 alt=""
-                style={{ display: isLoading ? "none" : "inline-block" }}
+                onLoad={() => {
+                    setIsOnLoad(true);
+                }}
+                style={{
+                    display: isOnLoad && !isLoading ? "inline-block" : "none",
+                }}
             />
             <span className="truncate color-white text-center text-15 mt-5">
                 {name}
             </span>
-            {isLoading ? (
+            {!isOnLoad || isLoading ? (
                 <List
                     animate={true}
                     title={""}

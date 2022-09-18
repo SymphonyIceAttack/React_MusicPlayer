@@ -15,7 +15,6 @@ const index: React.FC<Props> = ({ picUrl, name, id, isLoading }) => {
                 alt=""
                 onLoad={() => {
                     setIsOnLoad(true);
-                    console.log(name, "图片加载了");
                 }}
                 src={picUrl}
                 style={{
