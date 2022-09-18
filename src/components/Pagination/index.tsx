@@ -16,7 +16,7 @@ const index: React.FC<Props> = ({ total, limit, previous, next }) => {
     }, [total]);
     return (
         <div className="flex items-center justify-center">
-            <div className="w-500 flex items-center justify-center">
+            <div className="w-400 flex items-center justify-between">
                 <span
                     className="box-border cursor-pointer hover:blur-1 hover:blur-1 hover:sd-8  hover:shadow-teal active:sd-20  transform"
                     onClick={() => {
