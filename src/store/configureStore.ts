@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-
+import MusicPlayList from "./reducers/MusicPlay"
 export const store = configureStore({
     reducer: {
+        MusicPlayList
     },
 });
 

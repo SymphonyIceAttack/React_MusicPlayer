@@ -4,6 +4,7 @@ import SingerListHook from "@/hook/SingerListHook";
 import Style from "./SingerList.module.less";
 import PageContainer from "@/components/PageContainer";
 import { nanoid } from "nanoid";
+import ArrayCreate from "@/utils/ArrayCreate";
 const index = () => {
     const [type, setType] = useState(1);
     const [isLoading, songerList] = SingerListHook(type);
@@ -13,12 +14,12 @@ const index = () => {
                 className={`${Style.SingerList} p-20  flex  flex-wrap items-center`}
             >
                 {isLoading
-                    ? Array.from({ length: 30 }, () => ({
+                    ? ArrayCreate(30, {
                           picUrl: "",
                           name: "",
                           id: "",
                           isLoading,
-                      })).map((item) => {
+                      }).map((item) => {
                           return (
                               <ImageItem
                                   picUrl={item.picUrl}

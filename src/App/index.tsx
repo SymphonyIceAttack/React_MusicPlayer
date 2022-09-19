@@ -12,7 +12,7 @@ import UserMessage from "./MusicContainer/NarBarHeader/UserMessage";
 import MusicContent from "./MusicContainer/MusicContent";
 import Sidebar from "./MusicContainer/MusicContent/Sidebar";
 import Pages from "./MusicContainer/MusicContent/Pages";
-
+import MusicPlayer from "./MusicPlayer";
 function App() {
     return (
         <div
@@ -32,6 +32,7 @@ function App() {
                     <Suspense fallback={<Loading />}>{Pages()}</Suspense>
                 </MusicContent>
             </MusicContainer>
+            <MusicPlayer />
         </div>
     );
 }

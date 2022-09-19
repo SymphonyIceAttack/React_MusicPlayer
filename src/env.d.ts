@@ -2,6 +2,7 @@
 interface ImportMetaEnv {
 
     VITE_BASE_URL: string;
-    VITE_BASE_PORT: number
+    VITE_BASE_PORT: number;
+    VITE_BASE_IP: string
 
 }

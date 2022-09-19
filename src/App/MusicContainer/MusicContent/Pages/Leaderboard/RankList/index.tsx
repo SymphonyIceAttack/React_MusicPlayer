@@ -3,6 +3,7 @@ import TopListHook from "@/hook/TopListHook";
 import Style from "./RankList.module.less";
 import ImageItem from "./ImageItem";
 import { nanoid } from "nanoid";
+import ArrayCreate from "@/utils/ArrayCreate";
 const index = () => {
     const [isLoading, TopList] = TopListHook();
     return (
@@ -10,12 +11,12 @@ const index = () => {
             className={`${Style.RankList}  p-20  flex  flex-wrap items-center`}
         >
             {isLoading
-                ? Array.from({ length: 30 }, () => ({
+                ? ArrayCreate(30, {
                       coverImgUrl: "",
                       name: "",
                       id: "",
                       isLoading,
-                  })).map((item) => {
+                  }).map((item) => {
                       return (
                           <ImageItem
                               coverImgUrl={item.coverImgUrl}

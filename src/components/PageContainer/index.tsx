@@ -5,7 +5,7 @@ interface Props {
 }
 const index: React.FC<Props> = ({ children }) => {
     return (
-        <div className="flex-auto overflow-auto">
+        <div className="PageContainer flex-auto overflow-auto">
             <PageNavBar />
             {children}
         </div>

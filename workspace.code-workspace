@@ -1,26 +1,29 @@
 {
-	"folders": [
-		{
-			"path": "./"
-		},
-		{
-			"path": "./src/store"
-		},
-		{
-			"path": "./src/App"
-		},
-		{
-			"path": "./src/App/MusicContainer/MusicContent/Pages"
-		},
-		{
-			"path": "./src/components"
-		},
-		{
-			"path": "./src/hook"
-		},
-	],
-	"settings": {
-		"nuxt.isNuxtApp": false,
-		"DockerRun.DisableAutoGenerateConfig": true
-	}
+    "folders": [
+        {
+            "path": "./"
+        },
+        {
+            "path": "./src/store"
+        },
+        {
+            "path": "./src/App"
+        },
+        {
+            "path": "./src/App/MusicContainer/MusicContent/Pages"
+        },
+        {
+            "path": "./src/components"
+        },
+        {
+            "path": "./src/hook"
+        },
+        {
+            "path": "./src/utils"
+        }
+    ],
+    "settings": {
+        "nuxt.isNuxtApp": false,
+        "DockerRun.DisableAutoGenerateConfig": true
+    }
 }

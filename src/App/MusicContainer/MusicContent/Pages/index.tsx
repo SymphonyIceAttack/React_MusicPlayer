@@ -7,6 +7,7 @@ const Radio = lazy(() => import("./Radio"));
 const Leaderboard = lazy(() => import("./Leaderboard"));
 const SingerList = lazy(() => import("./SingerList"));
 const Dayrec = lazy(() => import("./Dayrec"));
+const MusicPlayer = lazy(() => import("./MusicPlayer"));
 
 export default () => {
     return useRoutes([
@@ -33,6 +34,10 @@ export default () => {
         {
             path: "/Dayrec",
             element: <Dayrec />,
+        },
+        {
+            path: "/MusicPlayer",
+            element: <MusicPlayer />,
         },
     ]);
 };
