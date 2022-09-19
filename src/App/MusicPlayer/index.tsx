@@ -8,7 +8,7 @@ const index = () => {
     const MusicPlayList = useSelector((app: RootState) => app.MusicPlayList);
 
     useEffect(() => {
-        !isExpand && setIsExpand(true);
+        MusicPlayList.length !== 0 && !isExpand && setIsExpand(true);
     }, [MusicPlayList]);
     return (
         <div

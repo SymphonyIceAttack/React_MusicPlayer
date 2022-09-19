@@ -9,7 +9,7 @@ interface Props {
     MusicUrl: string;
 }
 const index: React.FC<Props> = ({ time, MusicUrl }) => {
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
     return (
         <>
