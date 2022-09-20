@@ -6,12 +6,12 @@ import AudioPlayer from "./AudioPlayer";
 import UpArrow from "./UpArrow";
 import DownArrow from "./DownArrow";
 const index = () => {
-    const [isExpand, setIsExpand] = useState(true);
+    const [isExpand, setIsExpand] = useState(false);
     const MusicPlayList = useSelector((app: RootState) => app.MusicPlayList);
     const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
 
     useEffect(() => {
-        MusicPlayList.length !== 0 && !isExpand && setIsExpand(false);
+        MusicPlayList.length !== 0 && !isExpand && setIsExpand(true);
         MusicPlayList.length !== 0 &&
             setCurrentMusicIndex(MusicPlayList.length - 1);
     }, [MusicPlayList]);
