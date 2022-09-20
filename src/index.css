@@ -23,3 +23,21 @@ iframe {
 html {
     font-size: 4px;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: hsl(183, 97%, 27%);
+  --webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0);
+  --webkit-box-shadow: none;
+}
