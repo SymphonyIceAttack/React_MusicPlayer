@@ -5,12 +5,14 @@ import { AiOutlinePause } from "react-icons/ai";
 import { useSelector } from "react-redux";
 
 interface Props {
-    time: number;
     MusicUrl: string;
 }
-const index: React.FC<Props> = ({ time, MusicUrl }) => {
+const index: React.FC<Props> = ({ MusicUrl }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
+    useEffect(() => {
+        setIsPlaying(false);
+    }, [MusicUrl]);
     return (
         <>
             {isPlaying ? (
