@@ -19,7 +19,7 @@ const index = () => {
     useEffect(() => {}, [currentMusicIndex]);
     return (
         <div
-            className={`fixed bottom-10 left-0 bg-green h-60  border-rounded-5 flex
+            className={`fixed bottom-10 left-0 bg-white  h-60  border-rounded-5 flex
           items-center   justify-between overflow-hidden transition-all`}
         >
             <div
