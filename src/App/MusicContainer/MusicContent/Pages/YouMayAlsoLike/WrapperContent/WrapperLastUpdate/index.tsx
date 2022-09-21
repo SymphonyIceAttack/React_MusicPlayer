@@ -12,32 +12,36 @@ const index = () => {
     return (
         <div className={`${Style.WrapperLastUpdate}`}>
             <WrapperTitle content={"最新歌曲"} />
-            {isLoading
-                ? ArrayCreate(3, {}).map((item) => {
-                      return (
-                          <List
-                              animate={true}
-                              title={""}
-                              speed={2}
-                              className="h-100 w-100%"
-                              viewBox="0 0 400 160"
-                              backgroundColor="#f3f"
-                              foregroundColor="green"
-                              key={nanoid()}
-                          />
-                      );
-                  })
-                : newSong.map((item) => {
-                      return (
-                          <MusicPlayItem
-                              key={nanoid()}
-                              name={item.name}
-                              songer={item.song.artists[0].name}
-                              time={item.song.bMusic.playTime}
-                              id={item.id}
-                          />
-                      );
-                  })}
+            {isLoading ? (
+                ArrayCreate(3, {}).map((item) => {
+                    return (
+                        <List
+                            animate={true}
+                            title={""}
+                            speed={2}
+                            className="h-100 w-100%"
+                            viewBox="0 0 400 160"
+                            backgroundColor="#f3f"
+                            foregroundColor="green"
+                            key={nanoid()}
+                        />
+                    );
+                })
+            ) : (
+                <div className="sd-5  border-rounded-10 ">
+                    {newSong.map((item) => {
+                        return (
+                            <MusicPlayItem
+                                key={nanoid()}
+                                name={item.name}
+                                songer={item.song.artists[0].name}
+                                time={item.song.bMusic.playTime}
+                                id={item.id}
+                            />
+                        );
+                    })}
+                </div>
+            )}
         </div>
     );
 };

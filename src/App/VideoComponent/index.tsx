@@ -1,17 +1,9 @@
 import React from "react";
-
+import bg_Home from "/bg_Home.png";
 const index = () => {
     return (
         <div className=" h-100% w-100% z--100 " pos="fixed">
-            <video
-                className="object-fill"
-                autoPlay={true}
-                loop={true}
-                muted={true}
-            >
-                <source src="/7btrrd.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            <img className="object-fill" src={bg_Home}></img>
         </div>
     );
 };

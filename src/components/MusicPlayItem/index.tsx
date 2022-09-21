@@ -25,7 +25,12 @@ const index: React.FC<Props> = ({ name, songer, time, id }) => {
     }, [URL]);
 
     return (
-        <div className="flex h-40 justify-between items-center  p-x-10 color-white border-rounded-8 border-1 bgBlur opacity-50  hover:bg-dark-8">
+        <div
+            className="flex h-40 justify-between items-center  p-x-10 p-y-3 color-white   opacity-50  hover:bg-dark-8  hover:first-border-rounded-t-10  hover:last-border-rounded-b-10
+            not-first-border-t-coolgray
+            not-first-border-t-1
+         "
+        >
             <span className="truncate">{name}</span>
             <span className="truncate">{songer}</span>
             <span className="truncate">{time}</span>
@@ -41,8 +46,8 @@ const index: React.FC<Props> = ({ name, songer, time, id }) => {
                         )
                             .then((res) => res.json())
                             .then((data: NetWorkType) => {
-
                                 setURL(data.data[0].url);
+                                
                             });
                     }}
                 >

@@ -24,6 +24,7 @@
     ],
     "settings": {
         "nuxt.isNuxtApp": false,
-        "DockerRun.DisableAutoGenerateConfig": true
+        "DockerRun.DisableAutoGenerateConfig": true,
+        "liveServer.settings.multiRootWorkspaceName": "React_MusicPlayer"
     }
 }
