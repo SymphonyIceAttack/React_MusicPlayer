@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import localRequest from "@/utils/localRequest"
 export type HotDjListType = {
     rcmdtext: string;
     name: string;
@@ -15,6 +16,7 @@ export default (): [boolean, React.Dispatch<React.SetStateAction<number>>, HotDj
     const [HotDjList, setHotDjList] = useState<HotDjListType[]>([])
     useEffect(() => {
         setisLoading(true)
+
         fetch(import.meta.env.VITE_BASE_URL + `dj/hot?limit=20&offset=${offset}`).then(res => res.json()).then((data: NetWorkType) => {
             setisLoading(false)
             setHotDjList(data.djRadios)

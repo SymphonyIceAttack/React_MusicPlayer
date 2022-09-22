@@ -17,7 +17,7 @@ const index: React.FC<Props> = ({ picUrl, name, id, isLoading, rcmdtext }) => {
                 onLoad={() => {
                     setIsOnLoad(true);
                 }}
-                src={picUrl}
+                src={"/栗山未来.be1af83.png"}
                 style={{
                     display: isOnLoad && !isLoading ? "inline-block" : "none",
                 }}
