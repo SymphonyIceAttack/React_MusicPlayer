@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import localRequest from "@/utils/localRequest";
+import ArrayCreate from '@/utils/ArrayCreate'
+import { nanoid } from "nanoid";
 interface MusicPlayItem {
     id: string;
     name: string;
@@ -24,13 +27,24 @@ export default (): [MusicPlayItem[], boolean] => {
     const [isLoading, setisLoading] = useState(true)
     useEffect(() => {
         setisLoading(true)
-        const baseUrl = import.meta.env.VITE_BASE_URL;
-        fetch(baseUrl + "personalized/newsong?realIP=116.25.146.177")
-            .then((res) => res.json())
-            .then((objNetWork: NetWorkType) => {
-                setisLoading(false)
-                setNewSong(objNetWork.result);
-            });
+        localRequest("/images/th.jpeg").then((data) => {
+            setisLoading(false)
+            setNewSong(ArrayCreate<MusicPlayItem>(5, {
+                id: nanoid(),
+                name: "xxxx",
+                picUrl: data,
+                song: {
+                    artists: [
+                        {
+                            name: "xxxx",
+                        }
+                    ],
+                    bMusic: {
+                        playTime: 1000,
+                    },
+                },
+            }));
+        });
     }, []);
     return [newSong, isLoading]
 }

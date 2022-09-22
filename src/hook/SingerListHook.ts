@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import localRequest from "@/utils/localRequest";
+import ArrayCreate from '@/utils/ArrayCreate'
+import { nanoid } from "nanoid";
 interface artists {
     name: string;
     id: string;
@@ -14,9 +17,13 @@ export default (type: number): [boolean, artists[]] => {
     const [isLoading, setisLoading] = useState(true)
     useEffect(() => {
         setisLoading(true)
-        fetch(import.meta.env.VITE_BASE_URL + "toplist/artist?type=1").then(res => res.json()).then((data: NetWorkType) => {
+        localRequest("/images/th.jpeg").then((data) => {
             setisLoading(false)
-            setsongerList(data.list.artists)
+            setsongerList(ArrayCreate<artists>(30, {
+                name: "xxxx",
+                id: nanoid(),
+                picUrl: data
+            }))
         })
     }, [type])
 

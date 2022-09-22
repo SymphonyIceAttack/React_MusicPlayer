@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-
+import localRequest from "@/utils/localRequest";
+import ArrayCreate from '@/utils/ArrayCreate'
+import { nanoid } from "nanoid";
 export interface playlists {
     name: string;
     id: string;
@@ -22,13 +24,15 @@ export default (): [number, React.Dispatch<React.SetStateAction<number>>, playli
     useEffect(() => {
         let isUpdate = true
         setisLoading(true)
-        fetch(import.meta.env.VITE_BASE_URL + `top/playlist?limit=15&offset=${offset}`, {
-            mode: 'cors'
-        }).then(res => res.json()).then((data: NetWorkType) => {
+        localRequest("/images/th.jpeg").then((data) => {
             isUpdate && setisLoading(false)
 
-            isUpdate && setplaList(data.playlists)
-            isUpdate && setTotal(data.total)
+            isUpdate && setplaList(ArrayCreate<playlists>(30, {
+                name: "xxxxx",
+                id: nanoid(),
+                coverImgUrl: data
+            }))
+            isUpdate && setTotal(300)
         })
         return () => {
             isUpdate = false

@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import localRequest from "@/utils/localRequest";
+import ArrayCreate from '@/utils/ArrayCreate'
+import { nanoid } from "nanoid";
 
 export type TopListType = {
     name: string;
@@ -15,9 +18,13 @@ export default (): [boolean, TopListType[]] => {
     const [TopList, setTopList] = useState<TopListType[]>([])
     useEffect(() => {
         setisLoading(true)
-        fetch(import.meta.env.VITE_BASE_URL + "toplist").then(res => res.json()).then((data: NetWorkType) => {
+        localRequest("/images/th.jpeg").then((data) => {
             setisLoading(false)
-            setTopList(data.list)
+            setTopList(ArrayCreate<TopListType>(30, {
+                name: "xxxx",
+                id: nanoid(),
+                coverImgUrl: data
+            }))
         })
     }, [])
     return [isLoading, TopList]

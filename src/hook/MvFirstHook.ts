@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-
+import localRequest from "@/utils/localRequest";
+import ArrayCreate from '@/utils/ArrayCreate'
+import { nanoid } from "nanoid";
 
 type NewMvType = {
     name: string;
@@ -15,9 +17,13 @@ export default (): [boolean, NewMvType[]] => {
     const [NewMvList, setNewMvList] = useState<NewMvType[]>([])
     useEffect(() => {
         setisLoading(true)
-        fetch(import.meta.env.VITE_BASE_URL + "mv/first").then(res => res.json()).then((data: NetWorkType) => {
+        localRequest("/images/th.jpeg").then((data) => {
             setisLoading(false)
-            setNewMvList(data.data)
+            setNewMvList(ArrayCreate<NewMvType>(30, {
+                name: "xxxx",
+                cover: data,
+                id: nanoid()
+            }))
         })
     }, [])
 
