@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import type { playlists } from "@/hook/HotPlayListHook";
 import ContentLoader, { List } from "react-content-loader";
+import { Link } from "react-router-dom";
+
 interface Props {
     playlists: playlists;
     isLoading: boolean;
@@ -10,8 +12,12 @@ const index: React.FC<Props> = ({
     isLoading,
 }) => {
     const [isOnLoad, setIsOnLoad] = useState(false);
+
     return (
-        <div className="m-15 flex flex-col justify-center w-200 ">
+        <Link
+            className="m-15 flex flex-col justify-center w-200 "
+            to={`PlaylistDetails/${id}`}
+        >
             <img
                 className="box-border border-rounded-5 border-1 border-coolGray w-200   text-0 hover:border-3 hover:bgBlur"
                 src={coverImgUrl}
@@ -37,7 +43,7 @@ const index: React.FC<Props> = ({
                     foregroundColor="green"
                 />
             ) : null}
-        </div>
+        </Link>
     );
 };
 

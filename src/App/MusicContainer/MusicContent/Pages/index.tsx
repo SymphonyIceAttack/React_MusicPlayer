@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { useRoutes, Navigate } from "react-router-dom";
 
 const YouMayAlsoLike = lazy(() => import("./YouMayAlsoLike"));
+const PlaylistDetails = lazy(() => import("./YouMayAlsoLike/PlaylistDetails"));
 const NewMv = lazy(() => import("./NewMv"));
 const Radio = lazy(() => import("./Radio"));
 const Leaderboard = lazy(() => import("./Leaderboard"));
@@ -14,6 +15,10 @@ export default () => {
         {
             path: "/",
             element: <YouMayAlsoLike />,
+        },
+        {
+            path: "/PlaylistDetails/:playlistid",
+            element: <PlaylistDetails />,
         },
         {
             path: "/NewMv",
