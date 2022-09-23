@@ -11,7 +11,10 @@ const index: React.FC<Props> = ({
 }) => {
     const [isOnLoad, setIsOnLoad] = useState(false);
     return (
-        <div className="m-15 flex flex-col justify-center w-200 ">
+        <div
+            className="m-15 flex flex-col justify-center w-200 "
+            to={`PlaylistDetails/${id}`}
+        >
             <img
                 className="box-border border-rounded-5 border-1 border-coolGray w-200   text-0 hover:border-3 hover:bgBlur"
                 src={coverImgUrl}

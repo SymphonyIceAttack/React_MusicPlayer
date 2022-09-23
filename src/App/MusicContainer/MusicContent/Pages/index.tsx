@@ -17,7 +17,7 @@ export default () => {
             element: <YouMayAlsoLike />,
         },
         {
-            path: "/PlaylistDetails",
+            path: "/PlaylistDetails/:playlistid",
             element: <PlaylistDetails />,
         },
         {
