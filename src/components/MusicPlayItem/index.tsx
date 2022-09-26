@@ -4,6 +4,7 @@ import { BiMoviePlay, BiDownload } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "@/store";
 import { increment } from "@/store";
+import Style from "./WrapperLastUpdate.module.less";
 interface Props {
     name: string;
     songer: string;
@@ -26,10 +27,9 @@ const index: React.FC<Props> = ({ name, songer, time, id }) => {
 
     return (
         <div
-            className="flex h-40 justify-between items-center  p-x-10 p-y-3 color-white   opacity-50  hover:bg-dark-8  hover:first-border-rounded-t-10  hover:last-border-rounded-b-10
+            className={`${Style.WrapperLastUpdate} flex h-40 justify-between items-center  p-x-10 p-y-3 color-white   opacity-50  hover:bg-dark-8  hover:first-border-rounded-t-10  hover:last-border-rounded-b-10
             not-first-border-t-coolgray
-            not-first-border-t-1
-         "
+            not-first-border-t-1`}
         >
             <span className="truncate">{name}</span>
             <span className="truncate">{songer}</span>
@@ -47,7 +47,6 @@ const index: React.FC<Props> = ({ name, songer, time, id }) => {
                             .then((res) => res.json())
                             .then((data: NetWorkType) => {
                                 setURL(data.data[0].url);
-                                
                             });
                     }}
                 >
