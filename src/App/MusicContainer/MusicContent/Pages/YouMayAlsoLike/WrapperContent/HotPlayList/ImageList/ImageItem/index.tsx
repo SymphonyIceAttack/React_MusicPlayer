@@ -15,11 +15,11 @@ const index: React.FC<Props> = ({
 
     return (
         <Link
-            className="m-15 flex flex-col justify-center w-200  cursor-pointer"
+            className="m-15 flex flex-col justify-center w-200  cursor-pointer "
             to={`PlaylistDetails/${id}`}
         >
             <img
-                className="box-border border-rounded-5 border-1 border-coolGray w-200   text-0 hover:border-3 hover:bgBlur"
+                className="box-border border-rounded-5 border-1 border-coolGray w-200   text-0 hover:border-3 hover:bgBlur "
                 src={coverImgUrl}
                 onLoad={() => {
                     setIsOnLoad(true);
