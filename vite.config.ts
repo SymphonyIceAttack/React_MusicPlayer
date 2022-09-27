@@ -49,6 +49,13 @@ export default defineConfig({
                         "font-weight": 500,
                     }),
                 ],
+                [
+                    /^bgFilter$/,
+                    ([, _]) => ({
+                        "backdrop-filter": `blur(30px)`,
+                        "-webkit-backdrop-filter": `blur(30px)`,
+                    }),
+                ],
                 [/^borderBottom$/, ([, _]) => ({
                     "border-bottom": `1px solid rgba(113 119 144 / 25%)`
                 })],

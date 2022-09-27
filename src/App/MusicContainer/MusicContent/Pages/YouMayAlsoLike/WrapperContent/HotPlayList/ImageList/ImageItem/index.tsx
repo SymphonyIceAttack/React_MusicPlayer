@@ -14,7 +14,7 @@ const index: React.FC<Props> = ({
     const [isOnLoad, setIsOnLoad] = useState(false);
     return (
         <Link
-            className="m-15 flex flex-col justify-center w-200  cursor-pointer"
+            className="m-15 flex flex-col justify-center w-200  cursor-pointer transition"
             to={`PlaylistDetails/${id}`}
         >
             <img
