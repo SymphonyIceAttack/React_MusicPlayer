@@ -19,7 +19,7 @@ const index: React.FC<Props> = ({
             to={`PlaylistDetails/${id}`}
         >
             <img
-                className="box-border border-rounded-5 border-1 border-coolGray w-200   text-0 hover:border-3 hover:bgBlur "
+                className="box-border border-rounded-5 border-1 border-coolGray w-200   text-0 hover:scale-105 hover:bgBlur decoration-none "
                 src={coverImgUrl}
                 onLoad={() => {
                     setIsOnLoad(true);
