@@ -15,7 +15,7 @@ const index: React.FC<Props> = ({
 
     return (
         <Link
-            className="m-15 flex flex-col justify-center w-200  cursor-pointer "
+            className="m-15 flex flex-col justify-center w-200  cursor-pointer decoration-none"
             to={`PlaylistDetails/${id}`}
         >
             <img
