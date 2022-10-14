@@ -2,7 +2,7 @@ import React from "react";
 
 const index = () => {
     return (
-        <div className=" h-100% w-100% z--100 " pos="fixed">
+        <div className=" h-100% w-100% z--100 left--5 top--1" pos="fixed">
             <video
                 className="object-fill"
                 autoPlay={true}

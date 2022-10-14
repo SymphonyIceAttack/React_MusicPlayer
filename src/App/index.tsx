@@ -17,7 +17,7 @@ function App() {
     return (
         <div
             pos="relative"
-            className="h-100vh w-100vw flex justify-center items-center"
+            className="h-98vh w-100vw flex justify-center items-center"
         >
             <VideoComponent />
             <MusicContainer>
