@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
+    "@symphonyiceattack/my-first-vite-plugin": "^2.0.4",
     "@types/node": "^18.7.15",
     "@types/react-icons": "^3.0.0",
     "@unocss/reset": "^0.45.18",
